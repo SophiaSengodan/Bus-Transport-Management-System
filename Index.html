@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Transport Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bus Transport Management System</h1>
+        <p>Manage buses, routes and passenger bookings</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#buses">Bus Details</a>
+        <a href="#booking">Booking</a>
+    </nav>
+
+    <section id="home" class="container">
+        <h2>Welcome</h2>
+        <p>Welcome to the Bus Transport Management System.</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>10+</h3>
+                <p>Available Buses</p>
+            </div>
+
+            <div class="card">
+                <h3>20+</h3>
+                <p>Routes</p>
+            </div>
+
+            <div class="card">
+                <h3>100+</h3>
+                <p>Passengers</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="buses" class="container">
+        <h2>Bus Details</h2>
+
+        <input type="text" id="search" placeholder="Search by route..."
+               onkeyup="searchBus()">
+
+        <table id="busTable">
+            <tr>
+                <th>Bus No</th>
+                <th>Route</th>
+                <th>Time</th>
+                <th>Seats</th>
+            </tr>
+
+            <tr>
+                <td>BUS101</td>
+                <td>Chennai - Vellore</td>
+                <td>08:00 AM</td>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <td>BUS102</td>
+                <td>Chennai - Bangalore</td>
+                <td>09:30 AM</td>
+                <td>18</td>
+            </tr>
+
+            <tr>
+                <td>BUS103</td>
+                <td>Vellore - Chennai</td>
+                <td>02:00 PM</td>
+                <td>30</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="booking" class="container">
+        <h2>Passenger Booking</h2>
+
+        <form onsubmit="bookBus(event)">
+            <label>Passenger Name</label>
+            <input type="text" id="name" required>
+
+            <label>Bus Number</label>
+            <input type="text" id="busNo" required>
+
+            <label>Travel Date</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Book Bus</button>
+        </form>
+
+        <div id="message"></div>
+    </section>
+
+    <footer>
+        <p>© 2026 Bus Transport Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
